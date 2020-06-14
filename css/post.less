@@ -1,0 +1,37 @@
+.post {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    @media screen and (max-width: 768px) {
+        height: calc(100vh - 40px);
+    }
+    article {
+        margin: 0 30px;
+        padding: 20px 0;
+    }
+    .article-title {
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+    .article-meta {
+        font-size: 14px;
+        margin-bottom: 16px;
+        font-weight: bold;
+        .tag {
+            color: #959da5;
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    .post-copyright {
+        border: 1px solid #E0E2E5;
+        margin-top: 10px;
+        padding: 0 16px;
+        word-break: break-all;
+        img.warning {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

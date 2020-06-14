@@ -1,0 +1,80 @@
+@primary-color: #f92040;
+@secondary-color: #f77a8d;
+@primary-background-color: #ff8a9c;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    @media screen and (max-width: 768px) {
+        height: auto;
+    }
+}
+
+body[data-has-mobile-header='false'] {
+    .main {
+        height: 100vh;
+        @media screen and (max-width: 768px) {
+            height: auto;
+        }
+    }
+}
+
+#nprogress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 3px;
+    > .bar {
+        height: 100%;
+        background: @primary-color;
+    }
+}
+
+.welcome {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    @media screen and (max-width: 768px) {
+        height: calc(100vh - 40px);
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 20px;
+    p {
+        padding: 0;
+        margin: 5px 0;
+    }
+    a {
+        color: #999;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@import './mobile-header.less';
+@import './nav-left.less';
+@import './nav-middle.less';
+@import './post.less';
